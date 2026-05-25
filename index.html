@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none'; frame-ancestors 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Mielido — L'Or de la nature, pur & authentique</title>
+  <meta name="description" content="Mielido, miel premium pur et authentique par Al'Fat Entreprise. 5 formats squeeze pratiques. Commandez sur WhatsApp.">
+  <link rel="icon" type="image/png" href="assets/images/brand/icone.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ─── VARIABLES ─────────────────────────────────────────────────────────── */
+    :root {
+      --prune-royal:   #27123D;
+      --prune-profond: #4B1D6D;
+      --or-miel:       #D4A017;
+      --or-vif:        #E8960A;
+      --miel-ambre:    #F2C46D;
+      --miel-clair:    #FCD98A;
+      --ivoire-chaud:  #FFF8EE;
+      --beige-doux:    #FDF0D5;
+      --beige-naturel: #F5E6C8;
+      --white:         #ffffff;
+      --text-dark:     #1a0a2e;
+      --text-medium:   #5C3D10;
+      --shadow-or:     0 4px 24px rgba(212,160,23,.18);
+      --shadow-card:   0 10px 40px rgba(212,160,23,.24);
+      --shadow-deep:   0 16px 52px rgba(39,18,61,.18);
+      --radius-card:   2rem;
+      --radius-btn:    50px;
+      --ease:          0.28s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ─── RESET ─────────────────────────────────────────────────────────────── */
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body { font-family:'Montserrat',sans-serif; background:var(--ivoire-chaud); color:var(--text-dark); line-height:1.6; overflow-x:hidden; }
+    h1,h2,h3,.serif { font-family:'Playfair Display',serif; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+    .container { max-width:1160px; margin:0 auto; padding:0 20px; }
+    .section { padding:90px 0; }
+    .text-center { text-align:center; }
+
+    /* ─── SCROLL REVEAL ─────────────────────────────────────────────────────── */
+    .fade-up { opacity:0; transform:translateY(36px); transition:opacity .65s var(--ease),transform .65s var(--ease); }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    .fade-up.d1 { transition-delay:.1s; } .fade-up.d2 { transition-delay:.2s; }
+    .fade-up.d3 { transition-delay:.3s; } .fade-up.d4 { transition-delay:.4s; }
+
+    /* ─── BRAND NAME ────────────────────────────────────────────────────────── */
+    .brand-name { font-family:'Playfair Display',serif; font-style:italic; }
+
+    /* ─── SECTION HEADINGS ──────────────────────────────────────────────────── */
+    @keyframes labelPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.6)} }
+    .section-label { display:inline-flex; align-items:center; gap:8px; background:rgba(212,160,23,.12); border:1px solid rgba(212,160,23,.36); color:var(--or-vif); padding:6px 16px; border-radius:50px; font-size:.68rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; margin-bottom:14px; font-family:'Montserrat',sans-serif; }
+    .section-label .pulse-dot { width:6px; height:6px; border-radius:50%; background:var(--or-vif); animation:labelPulse 2.2s ease-in-out infinite; flex-shrink:0; }
+    .section-title { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); color:var(--prune-royal); margin-bottom:12px; line-height:1.2; }
+    .section-subtitle { font-size:1rem; color:var(--text-medium); margin-bottom:52px; max-width:600px; }
+    .text-center .section-subtitle { margin-left:auto; margin-right:auto; }
+
+    /* ─── BUTTONS ────────────────────────────────────────────────────────────── */
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:var(--radius-btn); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.88rem; cursor:pointer; border:none; transition:var(--ease); white-space:nowrap; text-decoration:none; letter-spacing:.02em; }
+    .btn-primary { background:linear-gradient(135deg,var(--or-vif),var(--or-miel)); color:var(--prune-royal); box-shadow:0 4px 20px rgba(212,160,23,.45); }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 10px 32px rgba(212,160,23,.6); }
+    .btn-outline-white { background:rgba(255,255,255,.1); color:rgba(255,255,255,.92); border:1.5px solid rgba(255,255,255,.32); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+    .btn-outline-white:hover { background:rgba(255,255,255,.18); border-color:rgba(255,255,255,.6); transform:translateY(-2px); }
+    .btn-prune { background:var(--prune-royal); color:var(--white); }
+    .btn-prune:hover { background:var(--prune-profond); transform:translateY(-3px); box-shadow:0 8px 24px rgba(39,18,61,.3); }
+    .btn-wa { background:#25D366; color:var(--white); }
+    .btn-wa:hover { background:#1ebe58; transform:translateY(-3px); box-shadow:0 8px 28px rgba(37,211,102,.45); }
+    .wa-icon { width:17px; height:17px; fill:currentColor; display:inline-block; flex-shrink:0; }
+    .float-wa .wa-icon { width:28px; height:28px; }
+    .wa-icon-wrap .wa-icon { width:22px; height:22px; }
+    .btn-sm { padding:9px 18px; font-size:.78rem; }
+    .btn-full { width:100%; justify-content:center; }
+
+    /* ─── HEADER ─────────────────────────────────────────────────────────────── */
+    #header { position:fixed; top:0; left:0; right:0; z-index:1000; padding:14px 20px; transition:padding var(--ease); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; max-width:1140px; margin:0 auto; height:58px; gap:16px; background:rgba(39,18,61,.82); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border:1px solid rgba(212,160,23,.22); border-radius:50px; padding:8px 10px 8px 18px; transition:all .35s var(--ease); box-shadow:0 8px 32px rgba(0,0,0,.28); }
+    #header.scrolled .header-inner { background:rgba(39,18,61,.97); box-shadow:0 8px 44px rgba(0,0,0,.42); border-color:rgba(212,160,23,.35); }
+    .header-logo { height:36px; width:auto; object-fit:contain; display:block; transition:transform var(--ease); }
+    .header-logo:hover { transform:scale(1.04); }
+    nav { display:flex; gap:2px; }
+    nav a { color:rgba(255,255,255,.75); font-size:.8rem; font-weight:500; padding:7px 12px; border-radius:50px; transition:var(--ease); }
+    nav a:hover,nav a.active { color:var(--miel-ambre); background:rgba(212,160,23,.12); }
+    .header-actions { display:flex; align-items:center; gap:8px; }
+    .cart-btn { position:relative; background:rgba(255,255,255,.1); border:none; color:var(--white); width:40px; height:40px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; transition:var(--ease); }
+    .cart-btn:hover { background:var(--or-miel); color:var(--prune-royal); transform:scale(1.1); }
+    .cart-badge { position:absolute; top:-4px; right:-4px; background:var(--or-miel); color:var(--prune-royal); font-size:.62rem; font-weight:700; width:18px; height:18px; border-radius:50%; display:none; align-items:center; justify-content:center; }
+    .cart-badge.visible { display:flex; }
+    .hamburger { display:none; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); color:white; font-size:1.2rem; cursor:pointer; padding:6px 10px; border-radius:50px; transition:var(--ease); }
+    .hamburger:hover { background:rgba(212,160,23,.2); }
+    .mobile-nav { display:none; flex-direction:column; background:rgba(39,18,61,.97); backdrop-filter:blur(18px); padding:12px 20px 20px; border-top:1px solid rgba(212,160,23,.18); }
+    .mobile-nav.open { display:flex; }
+    .mobile-nav a { color:rgba(255,255,255,.9); padding:13px 0; border-bottom:1px solid rgba(255,255,255,.08); font-size:.9rem; font-weight:500; transition:color var(--ease); }
+    .mobile-nav a:hover { color:var(--miel-ambre); }
+
+    /* ─── HERO ───────────────────────────────────────────────────────────────── */
+    #hero { background:linear-gradient(145deg,#0e061a 0%,var(--prune-royal) 40%,var(--prune-profond) 100%); position:relative; overflow:hidden; padding:110px 0 80px; display:flex; align-items:center; }
+    .hero-motif { position:absolute; inset:0; background:url("assets/images/ui/motif.png") center / 700px auto repeat; opacity:.04; pointer-events:none; }
+    .hero-glow-left  { position:absolute; width:600px; height:600px; background:radial-gradient(circle,rgba(212,160,23,.15) 0%,transparent 70%); bottom:-160px; left:-160px; pointer-events:none; }
+    .hero-glow-right { position:absolute; width:800px; height:800px; background:radial-gradient(circle,rgba(242,196,109,.28) 0%,transparent 68%); top:-240px; right:-200px; pointer-events:none; animation:glowDrift 9s ease-in-out infinite alternate; }
+    @keyframes glowDrift { from{transform:translate(0,0)} to{transform:translate(-40px,55px)} }
+
+    /* hero centré en colonne — inspiré Salam Travels */
+    .hero-inner { position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:44px; text-align:center; }
+    .hero-left { display:flex; flex-direction:column; align-items:center; }
+    .hero-bottom { display:flex; flex-direction:column; align-items:center; gap:20px; width:100%; }
+    .hero-bottom-actions { display:flex; flex-direction:column; align-items:center; gap:14px; width:100%; }
+
+    /* pulsing dot + monospace tag (Salam Travels style) */
+    @keyframes heroPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.5)} }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:9px; background:rgba(212,160,23,.14); border:1px solid rgba(212,160,23,.45); color:var(--miel-ambre); padding:7px 18px; border-radius:50px; font-size:.7rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; margin-bottom:18px; font-family:'Montserrat',sans-serif; }
+    .hero-eyebrow .pulse-dot { width:7px; height:7px; border-radius:50%; background:var(--or-miel); animation:heroPulse 2s ease-in-out infinite; flex-shrink:0; }
+
+    .hero-title { font-family:'Playfair Display',serif; font-size:clamp(2.6rem,6vw,5rem); color:var(--white); line-height:1.08; margin-bottom:18px; }
+    .hero-title .gold { color:var(--miel-ambre); text-shadow:0 0 60px rgba(242,196,109,.5); }
+    .hero-sub { font-size:1.05rem; color:rgba(255,255,255,.72); line-height:1.8; max-width:580px; }
+    .hero-ctas { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+    .hero-pills { display:flex; flex-wrap:wrap; gap:9px; justify-content:center; }
+    .hero-pill { display:flex; align-items:center; gap:7px; background:rgba(212,160,23,.12); border:1px solid rgba(212,160,23,.32); color:rgba(255,255,255,.85); padding:7px 16px; border-radius:50px; font-size:.74rem; font-weight:500; transition:var(--ease); }
+    .hero-pill:hover { background:rgba(212,160,23,.25); border-color:var(--or-miel); }
+    .hero-tagline { display:inline-flex; align-items:center; gap:12px; }
+    .hero-tagline .tl-line { width:32px; height:2px; background:var(--or-miel); border-radius:2px; }
+    .hero-tagline span { font-family:'Playfair Display',serif; font-style:italic; font-size:.96rem; color:var(--miel-ambre); letter-spacing:.02em; }
+
+    /* stats row (Salam Travels style) */
+    .hero-stats { display:flex; flex-wrap:wrap; justify-content:center; gap:36px; padding-top:8px; }
+    .hero-stat-val { font-family:'Playfair Display',serif; font-style:italic; font-size:2.2rem; color:var(--miel-ambre); line-height:1; }
+    .hero-stat-lbl { font-size:.65rem; color:rgba(255,255,255,.45); letter-spacing:.1em; text-transform:uppercase; margin-top:4px; font-family:'Montserrat',sans-serif; }
+
+    .hero-visual { display:flex; justify-content:center; align-items:center; position:relative; width:100%; }
+    .hero-img-frame { position:relative; display:flex; justify-content:center; align-items:center; animation:heroFloat 6s ease-in-out infinite; width:100%; max-width:900px; }
+    @keyframes heroFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+    .hero-img-frame::before { content:''; position:absolute; inset:-3px; border-radius:28px; background:linear-gradient(135deg,var(--or-miel) 0%,transparent 55%,var(--miel-ambre) 100%); z-index:0; opacity:.45; }
+    .hero-img-frame::after  { content:''; position:absolute; inset:-16px; border-radius:34px; border:1px solid rgba(212,160,23,.18); z-index:0; }
+    .hero-img { position:relative; z-index:1; width:100%; max-width:900px; border-radius:24px; display:block; box-shadow:0 28px 80px rgba(0,0,0,.42),0 0 0 1px rgba(212,160,23,.2); }
+    .hero-dot-tl { position:absolute; bottom:-26px; left:-34px; width:110px; height:110px; z-index:0; background-image:radial-gradient(circle,rgba(212,160,23,.5) 1.5px,transparent 1.5px); background-size:14px 14px; opacity:.6; }
+    .hero-dot-tr { position:absolute; top:-18px; right:-22px; width:90px; height:90px; z-index:0; background-image:radial-gradient(circle,rgba(255,255,255,.3) 1.5px,transparent 1.5px); background-size:12px 12px; opacity:.5; }
+    .hero-badge { position:absolute; bottom:-24px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--or-miel),var(--or-vif)); color:var(--prune-royal); font-weight:700; font-size:.74rem; padding:8px 22px; border-radius:50px; white-space:nowrap; box-shadow:0 6px 22px rgba(212,160,23,.5); z-index:3; letter-spacing:.03em; }
+
+    /* ─── TRUST STRIP ─────────────────────────────────────────────────────────── */
+    .trust-strip { background:linear-gradient(90deg,var(--or-miel) 0%,var(--or-vif) 50%,var(--or-miel) 100%); padding:14px 0; overflow:hidden; box-shadow:0 5px 24px rgba(212,160,23,.4); }
+    .trust-track { display:flex; gap:44px; width:max-content; animation:marquee 28s linear infinite; }
+    .trust-track:hover { animation-play-state:paused; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .trust-item { display:flex; align-items:center; gap:10px; font-size:.82rem; font-weight:700; color:var(--prune-royal); white-space:nowrap; flex-shrink:0; }
+    .trust-dot { width:5px; height:5px; border-radius:50%; background:rgba(39,18,61,.4); flex-shrink:0; }
+
+    /* ─── PRODUCTS ───────────────────────────────────────────────────────────── */
+    #produits { background:var(--ivoire-chaud); position:relative; overflow:hidden; }
+    #produits::before { content:''; position:absolute; inset:0; background:url("assets/images/ui/motif.png") right top / 500px auto no-repeat; opacity:.05; pointer-events:none; }
+    .products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(265px,1fr)); gap:28px; }
+
+    .product-card { background:var(--white); border-radius:var(--radius-card); border:1.5px solid rgba(212,160,23,.18); box-shadow:var(--shadow-or); overflow:hidden; display:flex; flex-direction:column; transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease); }
+    .product-card:hover { transform:translateY(-12px); box-shadow:var(--shadow-card); border-color:var(--or-miel); }
+    .product-img-wrap { position:relative; overflow:hidden; height:240px; background:linear-gradient(160deg,var(--ivoire-chaud) 0%,var(--beige-doux) 100%); display:flex; align-items:center; justify-content:center; }
+    .product-img { height:205px; width:auto; max-width:92%; object-fit:contain; transition:transform .5s var(--ease); filter:drop-shadow(0 10px 30px rgba(212,160,23,.38)); }
+    .product-card:hover .product-img { transform:scale(1.09) translateY(-7px); }
+    .product-img-grad { position:absolute; inset:0; background:linear-gradient(to bottom,transparent 50%,rgba(39,18,61,.4) 100%); pointer-events:none; }
+    .product-format-badge { position:absolute; top:14px; left:14px; z-index:2; background:var(--prune-royal); color:var(--miel-ambre); font-size:.68rem; font-weight:700; padding:5px 12px; border-radius:50px; text-transform:uppercase; letter-spacing:.06em; box-shadow:0 2px 10px rgba(0,0,0,.22); }
+    .product-tag { position:absolute; bottom:13px; right:14px; z-index:2; background:linear-gradient(135deg,var(--or-miel),var(--or-vif)); color:var(--prune-royal); font-size:.68rem; font-weight:700; padding:5px 12px; border-radius:50px; box-shadow:0 2px 10px rgba(212,160,23,.4); }
+    .product-tag--sc { background:linear-gradient(135deg,var(--prune-profond),#6b2fa0); color:#fff; box-shadow:0 2px 10px rgba(75,29,109,.5); }
+    .product-format-badge--sc { background:linear-gradient(135deg,var(--prune-profond),#6b2fa0); color:#fff; }
+    .product-card--sur-commande { border:2px solid rgba(75,29,109,.35); }
+    .product-card--sur-commande:hover { border-color:var(--prune-profond); }
+    .price-public--sc { font-size:1.1rem; font-style:italic; color:var(--prune-profond); }
+    .price-public--sc span { color:var(--prune-profond); font-style:normal; font-weight:700; }
+
+    .product-body { padding:20px; flex:1; display:flex; flex-direction:column; gap:10px; }
+    .product-name { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--prune-royal); font-weight:700; line-height:1.3; }
+    .product-desc { font-size:.82rem; color:var(--text-medium); line-height:1.55; }
+    .product-prices { display:flex; flex-direction:column; gap:6px; padding:12px 0; border-top:1.5px solid var(--beige-naturel); }
+    .price-public { font-size:1.38rem; font-weight:700; color:var(--prune-royal); }
+    .price-public span { color:var(--or-miel); }
+    .price-reseller { font-size:.78rem; font-weight:600; color:var(--text-medium); background:rgba(212,160,23,.1); border:1px solid rgba(212,160,23,.28); padding:5px 12px; border-radius:50px; display:inline-flex; width:fit-content; }
+    .price-reseller strong { color:var(--or-vif); }
+    .product-qty-row { display:flex; align-items:center; gap:10px; margin-top:auto; padding-top:8px; }
+    .qty-label { font-size:.78rem; font-weight:600; color:var(--text-medium); }
+    .qty-control { display:flex; align-items:center; border:1.5px solid var(--beige-naturel); border-radius:50px; overflow:hidden; }
+    .qty-btn { background:var(--beige-doux); border:none; width:32px; height:32px; font-size:1.1rem; cursor:pointer; color:var(--prune-royal); font-weight:700; transition:var(--ease); }
+    .qty-btn:hover { background:var(--miel-ambre); }
+    .qty-input { width:38px; text-align:center; border:none; background:transparent; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.88rem; color:var(--prune-royal); outline:none; }
+    .product-actions { display:flex; flex-direction:column; gap:8px; padding:0 20px 20px; }
+
+    /* ─── CART ───────────────────────────────────────────────────────────────── */
+    .cart-overlay { position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:2000; opacity:0; pointer-events:none; transition:opacity .3s; backdrop-filter:blur(3px); }
+    .cart-overlay.open { opacity:1; pointer-events:all; }
+    .cart-panel { position:fixed; top:0; right:0; width:100%; max-width:480px; height:100vh; background:var(--ivoire-chaud); z-index:2001; transform:translateX(100%); transition:transform .38s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column; overflow:hidden; }
+    .cart-panel.open { transform:translateX(0); }
+    .cart-header { background:linear-gradient(135deg,var(--prune-royal),var(--prune-profond)); color:var(--white); padding:20px 24px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+    .cart-header h3 { font-family:'Playfair Display',serif; font-size:1.2rem; }
+    .cart-close { background:rgba(255,255,255,.15); border:none; color:white; width:36px; height:36px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:var(--ease); }
+    .cart-close:hover { background:rgba(255,255,255,.3); }
+    .cart-body { flex:1; overflow-y:auto; padding:20px 24px; }
+    .cart-empty { text-align:center; padding:60px 20px; color:var(--text-medium); }
+    .cart-empty .ei { font-size:3.5rem; margin-bottom:16px; }
+    .cart-items { display:flex; flex-direction:column; gap:12px; margin-bottom:22px; }
+    .cart-item { background:var(--white); border-radius:14px; padding:14px 16px; display:flex; align-items:center; gap:12px; border:1px solid rgba(212,160,23,.2); transition:var(--ease); }
+    .cart-item:hover { border-color:var(--or-miel); }
+    .cart-item-thumb { width:52px; height:62px; border-radius:10px; flex-shrink:0; object-fit:contain; background:var(--beige-doux); }
+    .cart-item-info { flex:1; }
+    .cart-item-name { font-family:'Playfair Display',serif; font-weight:700; font-size:.86rem; color:var(--prune-royal); }
+    .cart-item-fmt { font-size:.72rem; color:var(--text-medium); margin-bottom:6px; }
+    .cart-item-row { display:flex; align-items:center; gap:8px; }
+    .cart-item-price { font-weight:700; color:var(--or-miel); font-size:.88rem; }
+    .cart-item-remove { background:none; border:none; color:#cc3333; cursor:pointer; font-size:1rem; padding:4px; flex-shrink:0; opacity:.7; transition:var(--ease); }
+    .cart-item-remove:hover { opacity:1; transform:scale(1.2); }
+    .cart-summary { background:var(--white); border-radius:14px; padding:16px 18px; margin-bottom:20px; border:1.5px solid rgba(212,160,23,.25); }
+    .cart-summary-row { display:flex; justify-content:space-between; padding:5px 0; font-size:.85rem; color:var(--text-medium); border-bottom:1px solid var(--beige-naturel); }
+    .cart-summary-row:last-child { border:none; font-size:1.05rem; font-weight:700; color:var(--prune-royal); padding-top:10px; }
+    .cart-summary-row:last-child .tv { color:var(--or-miel); }
+    .cart-form { background:var(--white); border-radius:14px; padding:18px; margin-bottom:18px; border:1px solid var(--beige-naturel); }
+    .cart-form h4 { font-family:'Playfair Display',serif; font-size:1rem; color:var(--prune-royal); margin-bottom:12px; }
+    .form-group { margin-bottom:11px; }
+    .form-group label { display:block; font-size:.74rem; font-weight:700; color:var(--text-medium); margin-bottom:4px; text-transform:uppercase; letter-spacing:.04em; }
+    .form-group input,.form-group textarea,.form-group select { width:100%; padding:10px 14px; border:1.5px solid var(--beige-naturel); border-radius:10px; font-family:'Montserrat',sans-serif; font-size:.86rem; color:var(--text-dark); background:var(--ivoire-chaud); outline:none; transition:var(--ease); }
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus { border-color:var(--or-miel); background:var(--white); box-shadow:0 0 0 3px rgba(212,160,23,.12); }
+    .form-group textarea { resize:vertical; min-height:76px; }
+    .cart-footer { padding:16px 24px; background:var(--white); border-top:1px solid var(--beige-naturel); flex-shrink:0; }
+
+    /* ─── RESELLERS ──────────────────────────────────────────────────────────── */
+    #revendeurs { background:linear-gradient(135deg,var(--prune-royal) 0%,var(--prune-profond) 100%); position:relative; overflow:hidden; }
+    .revendeurs-motif { position:absolute; inset:0; background:url("assets/images/ui/motif.png") right center / 560px auto no-repeat; opacity:.08; pointer-events:none; }
+    #revendeurs .section-title { color:var(--white); }
+    #revendeurs .section-subtitle { color:rgba(255,255,255,.72); }
+    #revendeurs .section-label { background:rgba(212,160,23,.18); border-color:rgba(212,160,23,.38); color:var(--miel-ambre); }
+    .revendeurs-grid { display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; position:relative; z-index:1; }
+    .reseller-table-wrap { overflow-x:auto; border-radius:14px; }
+    .reseller-table { width:100%; border-collapse:collapse; background:rgba(255,255,255,.06); border-radius:14px; overflow:hidden; }
+    .reseller-table th { background:linear-gradient(90deg,var(--or-miel),var(--or-vif)); color:var(--prune-royal); padding:12px 16px; font-size:.78rem; font-weight:700; text-align:left; text-transform:uppercase; letter-spacing:.04em; }
+    .reseller-table td { padding:12px 16px; font-size:.86rem; color:rgba(255,255,255,.82); border-bottom:1px solid rgba(255,255,255,.07); transition:background var(--ease); }
+    .reseller-table tr:last-child td { border:none; }
+    .reseller-table tr:hover td { background:rgba(255,255,255,.06); }
+    .reseller-table .pc { color:var(--miel-ambre); font-weight:700; }
+    .reseller-table .ec { color:#6dffaa; font-weight:700; }
+    .reseller-info-box { margin-top:18px; padding:16px 20px; background:rgba(212,160,23,.1); border-radius:12px; border:1px solid rgba(212,160,23,.3); }
+    .reseller-info-box p { font-size:.83rem; color:rgba(255,255,255,.78); line-height:1.7; }
+    .reseller-form-card { background:rgba(255,255,255,.07); border-radius:var(--radius-card); padding:32px; border:1px solid rgba(212,160,23,.22); backdrop-filter:blur(4px); }
+    .reseller-form-card h3 { font-family:'Playfair Display',serif; color:var(--miel-ambre); font-size:1.25rem; margin-bottom:20px; }
+    .reseller-form-card .form-group label { color:rgba(255,255,255,.65); }
+    .reseller-form-card .form-group input,.reseller-form-card .form-group select,.reseller-form-card .form-group textarea { background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.14); color:white; }
+    .reseller-form-card .form-group input::placeholder,.reseller-form-card .form-group textarea::placeholder { color:rgba(255,255,255,.35); }
+    .reseller-form-card .form-group input:focus,.reseller-form-card .form-group select:focus,.reseller-form-card .form-group textarea:focus { background:rgba(255,255,255,.14); border-color:var(--or-miel); box-shadow:0 0 0 3px rgba(212,160,23,.15); }
+
+    /* ─── ABOUT ──────────────────────────────────────────────────────────────── */
+    #apropos { background:var(--beige-doux); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+    .about-visual { display:flex; justify-content:center; align-items:center; }
+    .about-emblem-wrap { position:relative; width:320px; height:320px; display:flex; align-items:center; justify-content:center; }
+    .about-ring  { position:absolute; inset:0;    border-radius:50%; border:2px dashed rgba(212,160,23,.5); animation:spinRing 18s linear infinite; }
+    .about-ring-2{ position:absolute; inset:20px; border-radius:50%; border:1px dashed rgba(212,160,23,.28); animation:spinRing 28s linear infinite reverse; }
+    @keyframes spinRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    .about-glow { position:absolute; inset:28px; border-radius:50%; background:radial-gradient(circle,rgba(212,160,23,.28) 0%,transparent 70%); animation:glowPulse 3.5s ease-in-out infinite; }
+    @keyframes glowPulse { 0%,100%{opacity:.6;transform:scale(.95)} 50%{opacity:1;transform:scale(1.05)} }
+    /* embleme sur fond clair — multiply fond le fond blanc dans la crème */
+    .about-emblem-img { position:relative; z-index:2; width:240px; height:240px; object-fit:contain; border-radius:50%; filter:drop-shadow(0 12px 36px rgba(212,160,23,.4)); transition:transform .5s var(--ease); mix-blend-mode:multiply; }
+    .about-emblem-wrap:hover .about-emblem-img { transform:scale(1.06); }
+    .about-tag { display:inline-flex; align-items:center; gap:7px; background:linear-gradient(135deg,var(--or-miel),var(--or-vif)); color:var(--prune-royal); font-size:.72rem; font-weight:700; padding:5px 14px; border-radius:50px; text-transform:uppercase; letter-spacing:.06em; margin-bottom:14px; }
+    .about-content .section-title { margin-bottom:16px; }
+    .about-content p { color:var(--text-medium); font-size:.94rem; line-height:1.78; margin-bottom:13px; }
+    .about-stats { display:flex; gap:24px; margin-top:28px; flex-wrap:wrap; }
+    .stat { text-align:center; padding:16px 20px; background:var(--white); border-radius:16px; box-shadow:var(--shadow-or); border:1px solid rgba(212,160,23,.22); min-width:90px; transition:transform var(--ease); }
+    .stat:hover { transform:translateY(-5px); box-shadow:var(--shadow-card); }
+    .stat-num { font-family:'Playfair Display',serif; font-size:2.1rem; color:var(--or-miel); font-weight:700; line-height:1; }
+    .stat-label { font-size:.7rem; color:var(--text-medium); font-weight:600; margin-top:5px; }
+    /* Signature sur fond clair : multiply fonctionne parfaitement */
+    .about-sig { margin-top:22px; }
+    .about-sig img { max-width:200px; mix-blend-mode:multiply; opacity:.85; }
+
+    /* ─── USAGES ─────────────────────────────────────────────────────────────── */
+    #usages { background:var(--ivoire-chaud); position:relative; overflow:hidden; }
+    #usages::after { content:''; position:absolute; inset:0; pointer-events:none; background:url("assets/images/ui/motif.png") left bottom / 420px auto no-repeat; opacity:.05; }
+    .usages-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:18px; }
+    .usage-card { background:var(--white); border-radius:18px; padding:28px 14px 24px; text-align:center; border:1.5px solid transparent; box-shadow:var(--shadow-or); transition:var(--ease); cursor:default; }
+    .usage-card:hover { border-color:var(--or-miel); transform:translateY(-6px); box-shadow:var(--shadow-card); background:linear-gradient(145deg,var(--white) 0%,var(--beige-doux) 100%); }
+    .usage-icon { font-size:2.4rem; margin-bottom:12px; transition:transform .3s; }
+    .usage-card:hover .usage-icon { transform:scale(1.18) rotate(-6deg); }
+    .usage-name { font-size:.86rem; font-weight:700; color:var(--prune-royal); margin-bottom:5px; }
+    .usage-desc { font-size:.73rem; color:var(--text-medium); line-height:1.45; }
+
+    /* ─── REVIEWS ────────────────────────────────────────────────────────────── */
+    #avis { background:var(--beige-naturel); }
+    .reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+    .review-card { background:var(--white); border-radius:var(--radius-card); padding:28px; box-shadow:var(--shadow-or); border:1px solid rgba(212,160,23,.15); position:relative; transition:var(--ease); overflow:hidden; }
+    .review-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--or-miel),var(--miel-ambre),var(--or-vif)); transform:scaleX(0); transform-origin:left; transition:transform .4s var(--ease); }
+    .review-card:hover::before { transform:scaleX(1); }
+    .review-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-card); }
+    .review-ql { position:absolute; top:14px; right:20px; font-size:4.5rem; color:rgba(212,160,23,.1); font-family:serif; line-height:1; }
+    .review-stars { color:var(--or-miel); font-size:1rem; letter-spacing:2px; margin-bottom:14px; }
+    .review-text { font-size:.9rem; color:var(--text-medium); line-height:1.7; font-style:italic; margin-bottom:20px; }
+    .review-author { display:flex; align-items:center; gap:12px; }
+    .review-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--or-miel),var(--or-vif)); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--prune-royal); font-weight:700; flex-shrink:0; }
+    .review-name { font-weight:700; font-size:.86rem; color:var(--prune-royal); }
+    .review-loc { font-size:.73rem; color:var(--text-medium); }
+
+    /* ─── FAQ ────────────────────────────────────────────────────────────────── */
+    #faq { background:var(--beige-doux); }
+    /* ── Partners ── */
+    .section--partners { background:var(--beige-doux); }
+    .partners-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:28px; margin-top:48px; }
+    .partner-card { background:var(--white); border-radius:var(--radius-card); overflow:hidden; box-shadow:0 4px 24px rgba(39,18,61,.08); border:1.5px solid rgba(212,160,23,.18); transition:transform .28s var(--ease),box-shadow .28s var(--ease); display:flex; flex-direction:column; }
+    .partner-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(39,18,61,.14); }
+    .partner-img-wrap { position:relative; height:190px; overflow:hidden; }
+    .partner-img { width:100%; height:100%; object-fit:cover; transition:transform .4s var(--ease); }
+    .partner-card:hover .partner-img { transform:scale(1.05); }
+    .partner-badge { position:absolute; top:14px; left:14px; background:linear-gradient(135deg,var(--or-miel),var(--or-vif)); color:var(--prune-royal); font-size:.65rem; font-weight:700; padding:4px 11px; border-radius:50px; text-transform:uppercase; letter-spacing:.06em; }
+    .partner-body { padding:20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+    .partner-name { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; color:var(--prune-royal); }
+    .partner-location { display:flex; align-items:center; gap:5px; font-size:.78rem; color:var(--text-medium); font-weight:600; }
+    .partner-location svg { color:var(--or-vif); flex-shrink:0; }
+    .partner-desc { font-size:.82rem; color:var(--text-medium); line-height:1.55; flex:1; }
+    .partner-cta { margin-top:8px; }
+    .partners-cta { text-align:center; margin-top:44px; display:flex; flex-direction:column; align-items:center; gap:16px; }
+    .partners-cta p { font-size:1rem; color:var(--text-dark); font-weight:500; }
+
+    .faq-list { max-width:780px; margin:0 auto; display:flex; flex-direction:column; gap:11px; }
+    .faq-item { background:var(--white); border-radius:14px; border:1.5px solid rgba(212,160,23,.2); overflow:hidden; transition:var(--ease); }
+    .faq-item.open { border-color:var(--or-miel); box-shadow:0 4px 22px rgba(212,160,23,.15); }
+    .faq-q { padding:18px 22px; font-weight:600; font-size:.91rem; color:var(--prune-royal); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px; user-select:none; transition:background var(--ease); }
+    .faq-q:hover { background:rgba(212,160,23,.05); }
+    .faq-icon { width:30px; height:30px; background:var(--beige-naturel); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.68rem; color:var(--prune-royal); transition:transform .28s ease,background .28s ease; flex-shrink:0; }
+    .faq-item.open .faq-icon { transform:rotate(180deg); background:var(--or-miel); color:white; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .38s var(--ease); }
+    .faq-a-inner { padding:0 22px 18px; font-size:.86rem; color:var(--text-medium); line-height:1.72; }
+    .faq-item.open .faq-a { max-height:400px; }
+
+    /* ─── CONTACT ────────────────────────────────────────────────────────────── */
+    #contact { background:var(--ivoire-chaud); }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:52px; }
+    .contact-info h3 { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--prune-royal); margin-bottom:14px; }
+    .contact-info p { font-size:.9rem; color:var(--text-medium); line-height:1.72; margin-bottom:26px; }
+    .wa-list { display:flex; flex-direction:column; gap:11px; margin-bottom:28px; }
+    .wa-item { display:flex; align-items:center; gap:14px; background:var(--white); border-radius:14px; padding:15px 18px; border:1px solid rgba(37,211,102,.2); text-decoration:none; transition:var(--ease); }
+    .wa-item:hover { border-color:#25D366; background:rgba(37,211,102,.04); transform:translateX(5px); box-shadow:0 4px 18px rgba(37,211,102,.12); }
+    .wa-icon-wrap { width:44px; height:44px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; font-size:1.25rem; flex-shrink:0; }
+    .wa-num { font-weight:700; color:var(--prune-royal); font-size:.9rem; }
+    .wa-lbl { font-size:.73rem; color:var(--text-medium); }
+    .contact-ctas { display:flex; flex-direction:column; gap:11px; }
+    .contact-form-card { background:var(--white); border-radius:var(--radius-card); padding:32px; box-shadow:var(--shadow-card); border:1.5px solid rgba(212,160,23,.22); }
+    .contact-form-card h3 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--prune-royal); margin-bottom:20px; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────────────────── */
+    footer { background:var(--prune-royal); color:rgba(255,255,255,.78); padding:64px 0 28px; position:relative; overflow:hidden; }
+    footer::before { content:''; position:absolute; inset:0; background:url("assets/images/ui/motif.png") left center / 420px auto no-repeat; opacity:.05; pointer-events:none; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:44px; margin-bottom:52px; position:relative; z-index:1; }
+    .footer-brand { position:relative; z-index:1; }
+    .footer-logo-box { background:rgba(255,255,255,.96); border-radius:16px; padding:12px 20px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:18px; box-shadow:0 4px 20px rgba(0,0,0,.28); transition:transform var(--ease); }
+    .footer-logo-box:hover { transform:scale(1.03); }
+    .footer-logo-box img { height:42px; width:auto; object-fit:contain; display:block; }
+    .footer-brand p { font-size:.83rem; line-height:1.72; color:rgba(255,255,255,.58); }
+    /* Signature dans le footer sur fond sombre → invert pour la rendre blanche */
+    .footer-sig { margin-top:16px; }
+    .footer-sig img { max-width:170px; opacity:.5; filter:brightness(0) invert(1); }
+    .social-links { display:flex; gap:10px; margin-top:18px; }
+    .social-link { width:40px; height:40px; background:rgba(255,255,255,.1); border-radius:50%; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.8); transition:var(--ease); flex-shrink:0; }
+    .social-link svg { width:18px; height:18px; fill:currentColor; display:block; }
+    .social-link:hover { transform:translateY(-4px); }
+    .social-link.fb:hover  { background:#1877F2; color:#fff; }
+    .social-link.ig:hover  { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
+    .social-link.wa:hover  { background:#25D366; color:#fff; }
+    .social-link.tk:hover  { background:#010101; color:#fff; box-shadow:2px 2px 0 #FF0050,-2px -2px 0 #00F2EA; }
+    .footer-col { position:relative; z-index:1; }
+    .footer-col h4 { font-weight:700; color:var(--miel-ambre); font-size:.83rem; text-transform:uppercase; letter-spacing:.07em; margin-bottom:18px; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:9px; }
+    .footer-col ul li a { font-size:.83rem; color:rgba(255,255,255,.6); transition:var(--ease); display:inline-flex; align-items:center; gap:5px; }
+    .footer-col ul li a:hover { color:var(--miel-ambre); padding-left:4px; }
+    .fc-num { font-size:.82rem; color:rgba(255,255,255,.62); margin-bottom:7px; }
+    .footer-divider { border:none; border-top:1px solid rgba(255,255,255,.1); margin-bottom:24px; position:relative; z-index:1; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:.76rem; color:rgba(255,255,255,.38); position:relative; z-index:1; }
+    .footer-bottom .gold { color:var(--or-miel); }
+
+    /* ─── FLOAT WA ───────────────────────────────────────────────────────────── */
+    .float-wa { position:fixed; bottom:28px; right:28px; z-index:900; width:62px; height:62px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.75rem; box-shadow:0 6px 28px rgba(37,211,102,.5); text-decoration:none; transition:transform var(--ease); animation:waPulse 2.8s ease-in-out infinite; }
+    .float-wa:hover { transform:scale(1.12); animation:none; }
+    @keyframes waPulse { 0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.5)} 50%{box-shadow:0 6px 48px rgba(37,211,102,.75)} }
+
+    /* ─── TOAST ──────────────────────────────────────────────────────────────── */
+    .toast { position:fixed; bottom:108px; right:28px; background:var(--prune-royal); color:var(--white); padding:14px 22px; border-radius:14px; font-size:.86rem; font-weight:600; box-shadow:var(--shadow-deep); z-index:3000; transform:translateY(16px); opacity:0; transition:all .3s var(--ease); border-left:4px solid var(--or-miel); max-width:280px; }
+    .toast.show { transform:translateY(0); opacity:1; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────────────────── */
+    @media (max-width:960px) {
+      nav { display:none; } .hamburger { display:block; }
+      #header { padding:10px 14px; }
+      .hero-img { max-width:560px; margin:0 auto; }
+      .hero-dot-tl,.hero-dot-tr { display:none; }
+      .hero-stats { gap:24px; }
+      .revendeurs-grid { grid-template-columns:1fr; }
+      .about-grid { grid-template-columns:1fr; text-align:center; }
+      .about-visual { order:-1; }
+      .about-stats { justify-content:center; }
+      .about-sig { display:flex; justify-content:center; }
+      .contact-grid { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:640px) {
+      .section { padding:64px 0; }
+      .products-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid { grid-template-columns:1fr; }
+      .header-inner { height:62px; }
+      .about-emblem-wrap { width:260px; height:260px; }
+      .about-emblem-img { width:200px; height:200px; }
+    }
+    @media (max-width:430px) { .products-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<svg style="display:none" aria-hidden="true">
+  <symbol id="wa-svg" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </symbol>
+</svg>
+
+<!-- ═══ HEADER ═══ -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#accueil">
+      <img src="assets/images/brand/logo-horizontal.png" alt="Mielido" class="header-logo">
+    </a>
+    <nav id="mainNav">
+      <a href="#accueil">Accueil</a>
+      <a href="#produits">Boutique</a>
+      <a href="#revendeurs">Revendeurs</a>
+      <a href="#apropos">À propos</a>
+      <a href="#partenaires">Partenaires</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://wa.me/2250504498899" target="_blank" class="btn btn-wa btn-sm"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> WhatsApp</a>
+      <button class="cart-btn" onclick="openCart()" aria-label="Panier">🛒<span class="cart-badge" id="cartBadge">0</span></button>
+      <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#accueil"    onclick="toggleMobileNav()">🏠 Accueil</a>
+    <a href="#produits"   onclick="toggleMobileNav()">🛍️ Boutique</a>
+    <a href="#revendeurs" onclick="toggleMobileNav()">🤝 Revendeurs</a>
+    <a href="#apropos"       onclick="toggleMobileNav()">ℹ️ À propos</a>
+    <a href="#partenaires"  onclick="toggleMobileNav()">🤝 Partenaires</a>
+    <a href="#faq"          onclick="toggleMobileNav()">❓ FAQ</a>
+    <a href="#contact"    onclick="toggleMobileNav()">📞 Contact</a>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section id="accueil">
+  <div id="hero">
+    <div class="hero-motif"></div>
+    <div class="hero-glow-left"></div>
+    <div class="hero-glow-right"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <!-- ── 1. Titre centré ── -->
+        <div class="hero-left">
+          <div class="hero-eyebrow"><span class="pulse-dot"></span>Gamme Squeeze 2025 — Nouveau</div>
+          <h1 class="hero-title"><span class="brand-name">Mielido</span>,<br><span class="gold">l'or de la nature</span><br>dans votre quotidien</h1>
+          <div class="hero-tagline">
+            <div class="tl-line"></div>
+            <span>L'Or de la nature, pur &amp; authentique</span>
+            <div class="tl-line"></div>
+          </div>
+        </div>
+        <!-- ── 2. Bannière gamme (pleine largeur) ── -->
+        <div class="hero-visual">
+          <div class="hero-img-frame">
+            <div class="hero-dot-tl"></div>
+            <div class="hero-dot-tr"></div>
+            <img src="assets/images/brand/banniere-mielido.png" alt="Gamme Mielido — 4 formats squeeze" class="hero-img">
+            <div class="hero-badge">🍯 Miel 100% pur &amp; naturel</div>
+          </div>
+        </div>
+        <!-- ── 3. Description + CTA + pills (centré, sous bannière) ── -->
+        <div class="hero-bottom">
+          <p class="hero-sub">Un miel pur, authentique et pratique, disponible en plusieurs formats pour accompagner vos tartines, thés, yaourts, infusions et recettes maison.</p>
+          <div class="hero-bottom-actions">
+            <div class="hero-ctas">
+              <a href="#produits" class="btn btn-primary">🛒 Commander maintenant</a>
+              <a href="#produits" class="btn btn-outline-white">Découvrir la gamme →</a>
+            </div>
+            <div class="hero-pills">
+              <div class="hero-pill">🍯 Formats pratiques</div>
+              <div class="hero-pill"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Commande WhatsApp</div>
+              <div class="hero-pill">🤝 Tarifs revendeur dès 12 u.</div>
+              <div class="hero-pill">🏢 Al'Fat Entreprise</div>
+            </div>
+          </div>
+        </div>
+        <!-- ── 4. Stats (Salam Travels style) ── -->
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-val">100%</div>
+            <div class="hero-stat-lbl">Pur &amp; naturel</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">6</div>
+            <div class="hero-stat-lbl">Formats disponibles</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">24h</div>
+            <div class="hero-stat-lbl">Livraison rapide</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">★ 5</div>
+            <div class="hero-stat-lbl">Satisfaction client</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trust Marquee -->
+  <div class="trust-strip">
+    <div class="trust-track">
+      <div class="trust-item">🍯 Miel 100% pur &amp; naturel</div><div class="trust-dot"></div>
+      <div class="trust-item">📦 4 formats squeeze disponibles</div><div class="trust-dot"></div>
+      <div class="trust-item"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Commande rapide sur WhatsApp</div><div class="trust-dot"></div>
+      <div class="trust-item">🚚 Livraison à domicile</div><div class="trust-dot"></div>
+      <div class="trust-item">🏆 Marque premium ivoirienne</div><div class="trust-dot"></div>
+      <div class="trust-item">🤝 Tarifs revendeur avantageux</div><div class="trust-dot"></div>
+      <div class="trust-item">🍯 Miel 100% pur &amp; naturel</div><div class="trust-dot"></div>
+      <div class="trust-item">📦 4 formats squeeze disponibles</div><div class="trust-dot"></div>
+      <div class="trust-item"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Commande rapide sur WhatsApp</div><div class="trust-dot"></div>
+      <div class="trust-item">🚚 Livraison à domicile</div><div class="trust-dot"></div>
+      <div class="trust-item">🏆 Marque premium ivoirienne</div><div class="trust-dot"></div>
+      <div class="trust-item">🤝 Tarifs revendeur avantageux</div><div class="trust-dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUITS ═══ -->
+<section id="produits" class="section">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="section-label"><span class="pulse-dot"></span>Notre gamme</div>
+      <h2 class="section-title">La gamme <span class="brand-name">Mielido</span> Squeeze</h2>
+      <p class="section-subtitle">Choisissez votre format et commandez en quelques secondes. Des formats pratiques pour la maison, le thé et la cuisine.</p>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- ═══ REVENDEURS ═══ -->
+<section id="revendeurs" class="section">
+  <div class="revendeurs-motif"></div>
+  <div class="container">
+    <div class="text-center fade-up" style="position:relative;z-index:1;">
+      <div class="section-label"><span class="pulse-dot"></span>Partenariat</div>
+      <h2 class="section-title">Vous souhaitez revendre <span class="brand-name">Mielido</span> ?</h2>
+      <p class="section-subtitle">Profitez de tarifs revendeur dès 12 unités et proposez une marque de miel premium, pratique et authentique.</p>
+    </div>
+    <div class="revendeurs-grid">
+      <div class="fade-up d1" style="position:relative;z-index:1;">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--miel-ambre);font-size:1.25rem;margin-bottom:18px;">💼 Tarifs revendeur officiels</h3>
+        <div class="reseller-table-wrap">
+          <table class="reseller-table">
+            <thead><tr><th>Format</th><th>Produit</th><th>Prix public</th><th>Prix revendeur</th><th>Économie</th></tr></thead>
+            <tbody>
+              <tr><td>0,120 L</td><td>Starter Squeeze</td><td>1 000 FCFA</td><td class="pc">800 FCFA</td><td class="ec">−20%</td></tr>
+              <tr><td>0,25 L</td><td>Mini Squeeze</td><td>2 000 FCFA</td><td class="pc">1 600 FCFA</td><td class="ec">−20%</td></tr>
+              <tr><td>0,5 L</td><td>Classic Squeeze</td><td>3 500 FCFA</td><td class="pc">3 000 FCFA</td><td class="ec">−14%</td></tr>
+              <tr><td>1 L</td><td>Family Squeeze</td><td>6 000 FCFA</td><td class="pc">5 200 FCFA</td><td class="ec">−13%</td></tr>
+              <tr><td>1,5 L</td><td>Maxi Squeeze</td><td>8 500 FCFA</td><td class="pc">7 500 FCFA</td><td class="ec">−12%</td></tr>
+              <tr><td style="color:var(--or-miel);font-weight:700">Sur commande</td><td><strong>Maxi+</strong></td><td colspan="2" style="text-align:center;font-style:italic;color:var(--prune-profond)">Prix selon quantité — <a href="https://wa.me/2250504498899?text=Bonjour%20Mielido%2C%20je%20souhaite%20un%20devis%20pour%20le%20Mielido%20Maxi%2B." target="_blank" rel="noopener noreferrer" style="color:var(--or-miel);font-weight:700">demander un devis</a></td><td class="ec">Sur devis</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="reseller-info-box">
+          <p>✅ Tarif dès <strong style="color:var(--miel-ambre)">12 unités</strong> — mixable entre formats<br>✅ Livraison disponible selon votre zone<br>✅ Marque premium, prête à vendre</p>
+        </div>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://wa.me/2250504498899?text=Bonjour%20Mielido%2C%20je%20souhaite%20devenir%20revendeur." target="_blank" class="btn btn-wa"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Devenir revendeur</a>
+          <a href="https://wa.me/2250778285271?text=Bonjour%20Mielido%2C%20je%20veux%20les%20conditions%20revendeur." target="_blank" class="btn btn-primary">📞 Conditions</a>
+        </div>
+      </div>
+      <div class="reseller-form-card fade-up d2" style="position:relative;z-index:1;">
+        <h3>📋 Formulaire revendeur</h3>
+        <form id="resellerForm" onsubmit="submitResellerForm(event)">
+          <div class="form-group"><label>Nom complet *</label><input type="text" id="rNom" placeholder="Votre nom" required maxlength="80" autocomplete="name"></div>
+          <div class="form-group"><label>Téléphone / WhatsApp *</label><input type="tel" id="rTel" placeholder="07 XX XX XX XX" required maxlength="25" autocomplete="tel" pattern="[\d\s\+\-\(\)]{6,25}"></div>
+          <div class="form-group"><label>Ville / Quartier *</label><input type="text" id="rVille" placeholder="Ex : Abidjan, Cocody" required maxlength="80"></div>
+          <div class="form-group"><label>Format(s) souhaité(s)</label><select id="rFormat"><option value="">Sélectionner</option><option>Mini Squeeze 0,25L</option><option>Classic Squeeze 0,5L</option><option>Family Squeeze 1L</option><option>Maxi Squeeze 1,5L</option><option>Tous les formats</option></select></div>
+          <div class="form-group"><label>Quantité estimée / mois</label><input type="text" id="rQte" placeholder="Ex : 24 unités"></div>
+          <button type="submit" class="btn btn-primary btn-full">Envoyer ma demande <svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ À PROPOS ═══ -->
+<section id="apropos" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual fade-up">
+        <div class="about-emblem-wrap">
+          <div class="about-ring"></div>
+          <div class="about-ring-2"></div>
+          <div class="about-glow"></div>
+          <img src="assets/images/brand/embleme.png" alt="Emblème Mielido" class="about-emblem-img">
+        </div>
+      </div>
+      <div class="about-content fade-up d2">
+        <div class="about-tag">🍯 Notre histoire</div>
+        <h2 class="section-title"><span class="brand-name">Mielido</span>, l'or de la nature par Al'Fat Entreprise</h2>
+        <p><span class="brand-name">Mielido</span> est une gamme de miel premium créée par <strong>Al'Fat Entreprise</strong>, une entreprise ivoirienne engagée dans la distribution de produits naturels de qualité.</p>
+        <p>Notre mission : rendre le miel plus pratique, plus accessible et plus agréable au quotidien — sans jamais sacrifier la pureté et l'authenticité du produit.</p>
+        <p>Grâce à nos flacons squeeze innovants, <span class="brand-name">Mielido</span> s'invite facilement dans vos petits-déjeuners, infusions, yaourts et recettes maison. <em>Une touche dorée pour chaque moment de la journée.</em></p>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-num">4</div><div class="stat-label">Formats disponibles</div></div>
+          <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Miel pur & naturel</div></div>
+          <div class="stat"><div class="stat-num">🇨🇮</div><div class="stat-label">Marque ivoirienne</div></div>
+        </div>
+        <div class="about-sig">
+          <img src="assets/images/brand/signature.png" alt="L'Or de la nature, pur & authentique">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ USAGES ═══ -->
+<section id="usages" class="section" style="background:var(--beige-naturel);">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="section-label"><span class="pulse-dot"></span>Utilisations</div>
+      <h2 class="section-title"><span class="brand-name">Mielido</span> dans votre quotidien</h2>
+      <p class="section-subtitle">Une touche dorée pour vos petits-déjeuners et bien plus encore.</p>
+    </div>
+    <div class="usages-grid">
+      <div class="usage-card fade-up d1"><div class="usage-icon">🥐</div><div class="usage-name">Tartines</div><div class="usage-desc">Sur vos tartines du matin, une goutte de <span class="brand-name">Mielido</span> suffit à tout changer.</div></div>
+      <div class="usage-card fade-up d1"><div class="usage-icon">☕</div><div class="usage-name">Thé</div><div class="usage-desc">Adoucissez votre thé quotidien avec la douceur naturelle de <span class="brand-name">Mielido</span>.</div></div>
+      <div class="usage-card fade-up d2"><div class="usage-icon">🌿</div><div class="usage-name">Infusions</div><div class="usage-desc">La touche parfaite pour sublimer vos infusions de plantes.</div></div>
+      <div class="usage-card fade-up d2"><div class="usage-icon">🥛</div><div class="usage-name">Yaourts</div><div class="usage-desc">Un filet de miel sur votre yaourt nature pour un délice simple.</div></div>
+      <div class="usage-card fade-up d3"><div class="usage-icon">🍳</div><div class="usage-name">Cuisine</div><div class="usage-desc">En marinade, en sauce ou en glaze, <span class="brand-name">Mielido</span> sublime vos plats.</div></div>
+      <div class="usage-card fade-up d3"><div class="usage-icon">🍮</div><div class="usage-name">Desserts</div><div class="usage-desc">Nappez vos crêpes, gâteaux ou fruits d'un miel doré et parfumé.</div></div>
+      <div class="usage-card fade-up d4"><div class="usage-icon">🎁</div><div class="usage-name">Cadeaux gourmands</div><div class="usage-desc">Un coffret <span class="brand-name">Mielido</span>, le cadeau premium qu'on adore offrir.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AVIS ═══ -->
+<section id="avis" class="section">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="section-label"><span class="pulse-dot"></span>Témoignages</div>
+      <h2 class="section-title">Ce qu'ils en disent</h2>
+      <p class="section-subtitle">Des clients satisfaits partout en Côte d'Ivoire.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up d1">
+        <div class="review-ql">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Le flacon squeeze est vraiment pratique, je mets mon miel dans mon thé sans en mettre partout. La qualité est au rendez-vous. Je ne retournerai plus aux bocaux classiques.</p>
+        <div class="review-author"><div class="review-avatar">A</div><div><div class="review-name">Aminata K.</div><div class="review-loc">Abidjan, Cocody</div></div></div>
+      </div>
+      <div class="review-card fade-up d2">
+        <div class="review-ql">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">J'ai commandé le format Family 1L pour toute la famille. Livraison rapide, produit conforme. Mes enfants adorent mettre eux-mêmes leur miel sur les tartines. Commande passée sur WhatsApp en 2 minutes.</p>
+        <div class="review-author"><div class="review-avatar">K</div><div><div class="review-name">Kouamé D.</div><div class="review-loc">Yamoussoukro</div></div></div>
+      </div>
+      <div class="review-card fade-up d3">
+        <div class="review-ql">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">En tant que revendeuse, les tarifs sont très intéressants à partir de 12 unités. <span class="brand-name">Mielido</span> se vend très bien dans mon quartier. Je recommande vivement.</p>
+        <div class="review-author"><div class="review-avatar">F</div><div><div class="review-name">Fatoumata S.</div><div class="review-loc">Bouaké — Revendeuse</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARTENAIRES ═══ -->
+<section id="partenaires" class="section section--partners">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="section-label"><span class="pulse-dot"></span>Points de vente</div>
+      <h2 class="section-title">Nos partenaires de confiance</h2>
+      <p class="section-subtitle">Retrouvez <span class="brand-name">Mielido</span> chez nos partenaires sélectionnés près de chez vous.</p>
+    </div>
+    <div class="partners-grid fade-up d2">
+      <div class="partner-card">
+        <div class="partner-img-wrap">
+          <img src="assets/images/partners/pharmacie-kahira.jpg" alt="Pharmacie Kahira" class="partner-img" loading="lazy">
+          <span class="partner-badge">Revendeur officiel</span>
+        </div>
+        <div class="partner-body">
+          <div class="partner-name">Pharmacie Kahira</div>
+          <div class="partner-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Koumassi, Abidjan
+          </div>
+          <div class="partner-desc">Votre pharmacie de quartier à Koumassi. Retrouvez toute la gamme Mielido en rayon.</div>
+          <a href="https://wa.me/2250504498899?text=Bonjour%2C%20je%20cherche%20un%20point%20de%20vente%20Mielido%20%C3%A0%20Koumassi." target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm partner-cta"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Localiser</a>
+        </div>
+      </div>
+    </div>
+    <div class="partners-cta fade-up d3">
+      <p>Vous souhaitez devenir point de vente <span class="brand-name">Mielido</span> ?</p>
+      <a href="https://wa.me/2250504498899?text=Bonjour%20Mielido%2C%20je%20souhaite%20devenir%20partenaire%20revendeur." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Devenir partenaire →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="section-label"><span class="pulse-dot"></span>FAQ</div>
+      <h2 class="section-title">Questions fréquentes</h2>
+      <p class="section-subtitle">Tout ce que vous devez savoir sur <span class="brand-name">Mielido</span>.</p>
+    </div>
+    <div class="faq-list fade-up d1" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="text-center fade-up">
+      <div class="section-label"><span class="pulse-dot"></span>Contact</div>
+      <h2 class="section-title">Contactez-nous</h2>
+      <p class="section-subtitle">Notre équipe est disponible sur WhatsApp pour vous répondre rapidement.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="fade-up d1">
+        <div class="contact-info">
+          <h3>Parlons-nous</h3>
+          <p>Que vous souhaitiez passer une commande, en savoir plus sur nos produits ou devenir revendeur, notre équipe vous accompagne directement sur WhatsApp.</p>
+          <div class="wa-list">
+            <a href="https://wa.me/2250504498899" target="_blank" class="wa-item"><div class="wa-icon-wrap"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg></div><div><div class="wa-num">05 04 49 88 99</div><div class="wa-lbl">Commandes &amp; informations</div></div></a>
+            <a href="https://wa.me/2250778285271" target="_blank" class="wa-item"><div class="wa-icon-wrap"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg></div><div><div class="wa-num">07 78 28 52 71</div><div class="wa-lbl">Service commercial</div></div></a>
+            <a href="https://wa.me/2250574540805" target="_blank" class="wa-item"><div class="wa-icon-wrap"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg></div><div><div class="wa-num">05 74 54 08 05</div><div class="wa-lbl">Revendeurs &amp; partenariats</div></div></a>
+          </div>
+          <div class="contact-ctas">
+            <a href="https://wa.me/2250504498899?text=Bonjour%20Mielido%2C%20je%20souhaite%20passer%20une%20commande." target="_blank" class="btn btn-wa"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Commander sur WhatsApp</a>
+            <a href="https://wa.me/2250574540805?text=Bonjour%20Mielido%2C%20je%20souhaite%20connaitre%20vos%20conditions%20revendeur." target="_blank" class="btn btn-prune">🤝 Demander le tarif revendeur</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-card fade-up d2">
+        <h3>✉️ Envoyer un message</h3>
+        <form id="contactForm" onsubmit="submitContactForm(event)">
+          <div class="form-group"><label>Nom complet *</label><input type="text" id="cNom" placeholder="Votre nom et prénom" required maxlength="80" autocomplete="name"></div>
+          <div class="form-group"><label>Téléphone *</label><input type="tel" id="cTel" placeholder="Votre numéro WhatsApp" required maxlength="25" autocomplete="tel" pattern="[\d\s\+\-\(\)]{6,25}"></div>
+          <div class="form-group"><label>Objet *</label><select id="cObjet" required><option value="">Choisir un objet</option><option>Passer une commande</option><option>Devenir revendeur</option><option>Informations produits</option><option>Livraison</option><option>Autre</option></select></div>
+          <div class="form-group"><label>Message *</label><textarea id="cMessage" placeholder="Écrivez votre message ici..." required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Envoyer via WhatsApp <svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-box">
+          <img src="assets/images/brand/logo-horizontal.png" alt="Mielido par Al'Fat Entreprise">
+        </div>
+        <p><span class="brand-name">Mielido</span>, c'est le miel premium en format squeeze — pratique, pur et authentique. Pour vos petits-déjeuners, infusions, yaourts et recettes du quotidien.</p>
+        <div class="footer-sig"><img src="assets/images/brand/signature.png" alt="L'Or de la nature, pur & authentique"></div>
+        <div class="social-links">
+          <a href="#" class="social-link fb" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-link ig" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/2250504498899" class="social-link wa" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="#" class="social-link tk" title="TikTok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li><li><a href="#produits">Boutique</a></li>
+          <li><a href="#revendeurs">Revendeurs</a></li><li><a href="#apropos">À propos</a></li>
+          <li><a href="#usages">Utilisations</a></li><li><a href="#partenaires">Partenaires</a></li><li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="#produits">Mini Squeeze 0,25L</a></li><li><a href="#produits">Classic Squeeze 0,5L</a></li>
+          <li><a href="#produits">Family Squeeze 1L</a></li><li><a href="#produits">Maxi Squeeze 1,5L</a></li>
+          <li><a href="#revendeurs">Tarifs revendeur</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="fc-num">📱 05 04 49 88 99</div>
+        <div class="fc-num">📱 07 78 28 52 71</div>
+        <div class="fc-num">📱 05 74 54 08 05</div>
+        <div style="margin-top:14px;"><a href="https://wa.me/2250504498899" target="_blank" class="btn btn-wa btn-sm"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> WhatsApp</a></div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <div>© <span class="gold brand-name">Mielido</span> par Al'Fat Entreprise — Tous droits réservés. 2025</div>
+      <div style="font-style:italic;">L'Or de la nature, pur &amp; authentique 🍯</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ CART ═══ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header"><h3>🛒 Votre panier</h3><button class="cart-close" onclick="closeCart()">✕</button></div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <button class="btn btn-wa btn-full" onclick="sendWhatsApp()"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Commander sur WhatsApp</button>
+  </div>
+</div>
+
+<a href="https://wa.me/2250504498899?text=Bonjour%20Mielido%2C%20je%20souhaite%20passer%20une%20commande." target="_blank" class="float-wa" title="Commander sur WhatsApp" aria-label="Commander sur WhatsApp"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg></a>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ── DATA ────────────────────────────────────────────────────────────────────── */
+const products = [
+  {
+    id:1, sku:'MIELIDO-STARTER-0125',
+    name:'<span class="brand-name">Mielido</span> Starter Squeeze',
+    nameRaw:'Mielido Starter Squeeze',
+    format:'0,120 L', price:1000, priceR:800,
+    img:'assets/images/products/mielido-starter.png',
+    desc:'Le format nomade par excellence. Compact et léger, il se glisse partout — sac, poche, bureau.',
+    tag:'🆕 Nouveau'
+  },
+  {
+    id:2, sku:'MIELIDO-MINI-025',
+    name:'<span class="brand-name">Mielido</span> Mini Squeeze',
+    nameRaw:'Mielido Mini Squeeze',
+    format:'0,25 L', price:2000, priceR:1600,
+    img:'assets/images/products/mielido-mini.png',
+    desc:'Format découverte idéal pour le bureau, le sac ou le petit-déjeuner. Pratique et discret.',
+    tag:'✨ Découverte'
+  },
+  {
+    id:3, sku:'MIELIDO-CLASSIC-050',
+    name:'<span class="brand-name">Mielido</span> Classic Squeeze',
+    nameRaw:'Mielido Classic Squeeze',
+    format:'0,5 L', price:3500, priceR:3000,
+    img:'assets/images/products/mielido-classic.png',
+    desc:'Le format du quotidien. Parfait pour le thé, les tartines et les yaourts.',
+    tag:'⭐ Le plus populaire'
+  },
+  {
+    id:4, sku:'MIELIDO-FAMILY-100',
+    name:'<span class="brand-name">Mielido</span> Family Squeeze',
+    nameRaw:'Mielido Family Squeeze',
+    format:'1 L', price:6000, priceR:5200,
+    img:'assets/images/products/mielido-family.png',
+    desc:'Pour toute la famille. Usage quotidien, cuisine et consommation régulière.',
+    tag:'👨‍👩‍👧 Famille'
+  },
+  {
+    id:5, sku:'MIELIDO-MAXI-150',
+    name:'<span class="brand-name">Mielido</span> Maxi Squeeze',
+    nameRaw:'Mielido Maxi Squeeze',
+    format:'1,5 L', price:8500, priceR:7500,
+    img:'assets/images/products/mielido-maxi.png',
+    desc:'Avec poignée pratique. Idéal pour les grandes familles, restaurants et revendeurs.',
+    tag:'🏆 Best-seller'
+  },
+  {
+    id:6, sku:'MIELIDO-MAXI-PLUS',
+    name:'<span class="brand-name">Mielido</span> Maxi+',
+    nameRaw:'Mielido Maxi+',
+    format:'Sur commande', price:0, priceR:0,
+    img:'assets/images/products/mielido-maxi-plus.png',
+    desc:'Grand format avec poignée. Volume et prix adaptés à votre besoin — restaurateurs, traiteurs, grandes familles. Disponible sur commande uniquement.',
+    tag:'📦 Sur commande',
+    surCommande:true
+  }
+];
+
+const faqData = [
+  { q:'Comment commander <span class="brand-name">Mielido</span> ?', a:'Ajoutez vos produits au panier, remplissez vos coordonnées, puis cliquez sur "Commander sur WhatsApp". Un message pré-rempli est envoyé — notre équipe vous confirme rapidement.' },
+  { q:'Quels formats sont disponibles ?', a:'6 formats : Starter (0,120 L), Mini (0,25 L), Classic (0,5 L), Family (1 L), Maxi avec poignée (1,5 L) et Maxi+ (grand format sur commande, volume selon besoin).' },
+  { q:'Quels sont les prix ?', a:'Starter 0,120L : 1 000 FCFA — Mini 0,25L : 2 000 FCFA — Classic 0,5L : 3 500 FCFA — Family 1L : 6 000 FCFA — Maxi 1,5L : 8 500 FCFA — Maxi+ : prix selon quantité sur devis.' },
+  { q:'Existe-t-il un tarif revendeur ?', a:'Oui ! Dès 12 unités : Starter à 800 FCFA, Mini à 1 600 FCFA, Classic à 3 000 FCFA, Family à 5 200 FCFA, Maxi à 7 500 FCFA. Maxi+ disponible sur devis selon volume.' },
+  { q:'Comment se fait la livraison ?', a:'Livraison disponible selon votre zone. Précisez commune et quartier lors de la commande WhatsApp — notre équipe vous informe des délais.' },
+  { q:'Quels moyens de paiement sont acceptés ?', a:'Paiement à la livraison accepté. Wave, Orange Money et MTN Mobile Money bientôt disponibles.' },
+  { q:'Puis-je commander plusieurs formats ?', a:'Oui ! Mixez les formats dans un même panier. Tout est envoyé en un seul message WhatsApp.' },
+  { q:'Comment contacter <span class="brand-name">Mielido</span> ?', a:'WhatsApp : 05 04 49 88 99 / 07 78 28 52 71 / 05 74 54 08 05. Réponse rapide garantie.' }
+];
+
+/* ── CART ────────────────────────────────────────────────────────────────────── */
+let cart = {};
+
+function renderProducts() {
+  document.getElementById('productsGrid').innerHTML = products.map((p,i) => {
+    if (p.surCommande) {
+      const waMsg = encodeURIComponent(`Bonjour Mielido, je souhaite commander du ${p.nameRaw}. Pouvez-vous m'indiquer les tarifs selon la quantité souhaitée ?`);
+      const waUrl = `https://wa.me/2250504498899?text=${waMsg}`;
+      return `
+    <div class="product-card product-card--sur-commande fade-up d${(i%4)+1}" id="card-${p.id}">
+      <div class="product-img-wrap">
+        <img src="${p.img}" alt="${p.nameRaw}" class="product-img" loading="lazy">
+        <div class="product-img-grad"></div>
+        <span class="product-format-badge product-format-badge--sc">Sur commande</span>
+        <span class="product-tag product-tag--sc">${p.tag}</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-prices">
+          <div class="price-public price-public--sc">Prix selon quantité — <span>sur devis</span></div>
+          <div class="price-reseller">Volume personnalisé · Contactez-nous</div>
+        </div>
+      </div>
+      <div class="product-actions">
+        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-full"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Demander un devis</a>
+      </div>
+    </div>`;
+    }
+    return `
+    <div class="product-card fade-up d${(i%4)+1}" id="card-${p.id}">
+      <div class="product-img-wrap">
+        <img src="${p.img}" alt="${p.nameRaw}" class="product-img" loading="lazy">
+        <div class="product-img-grad"></div>
+        <span class="product-format-badge">${p.format}</span>
+        <span class="product-tag">${p.tag}</span>
+      </div>
+      <div class="product-body">
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-prices">
+          <div class="price-public">Prix : <span>${p.price.toLocaleString('fr-FR')} FCFA</span></div>
+          <div class="price-reseller">Revendeur dès 12u. : <strong>${p.priceR.toLocaleString('fr-FR')} FCFA</strong></div>
+        </div>
+        <div class="product-qty-row">
+          <span class="qty-label">Qté :</span>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(${p.id},-1)">−</button>
+            <input class="qty-input" type="number" id="qty-${p.id}" value="1" min="1" max="99">
+            <button class="qty-btn" onclick="changeQty(${p.id},1)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-actions">
+        <button class="btn btn-primary btn-full" onclick="addToCart(${p.id})">🛒 Ajouter au panier</button>
+        <a href="${buildWAProduct(p)}" target="_blank" class="btn btn-wa btn-full btn-sm"><svg class="wa-icon" aria-hidden="true"><use href="#wa-svg"/></svg> Commander sur WhatsApp</a>
+      </div>
+    </div>`;
+  }).join('');
+  observeAll();
+}
+
+function buildWAProduct(p) {
+  const m = encodeURIComponent(`Bonjour Mielido, je souhaite commander :\n\n• ${p.nameRaw} (${p.format}) — ${p.price.toLocaleString('fr-FR')} FCFA\n\nMerci de confirmer la disponibilité et les modalités de livraison.`);
+  return `https://wa.me/2250504498899?text=${m}`;
+}
+
+function changeQty(id, d) {
+  const e = document.getElementById(`qty-${id}`);
+  e.value = Math.max(1, Math.min(99, (parseInt(e.value) || 1) + d));
+}
+
+function addToCart(id) {
+  const p = products.find(x => x.id === id);
+  const qty = parseInt(document.getElementById(`qty-${id}`).value) || 1;
+  if (cart[id]) cart[id].qty += qty; else cart[id] = {...p, qty};
+  updateBadge(); renderCart(); openCart();
+  showToast(`✅ ${p.nameRaw} ajouté au panier`);
+}
+function removeFromCart(id)  { delete cart[id]; updateBadge(); renderCart(); }
+function updateCartQty(id,d) { if(!cart[id])return; cart[id].qty+=d; if(cart[id].qty<1){removeFromCart(id);return;} renderCart(); }
+function total()  { return Object.values(cart).reduce((s,i)=>s+i.price*i.qty,0); }
+function count()  { return Object.values(cart).reduce((s,i)=>s+i.qty,0); }
+function updateBadge() { const b=document.getElementById('cartBadge'),c=count(); b.textContent=c; b.classList.toggle('visible',c>0); }
+
+function renderCart() {
+  const body = document.getElementById('cartBody');
+  const footer = document.getElementById('cartFooter');
+  const items = Object.values(cart);
+  if (!items.length) {
+    body.innerHTML = `<div class="cart-empty"><div class="ei">🛒</div><p>Votre panier est vide.</p><button class="btn btn-primary" onclick="closeCart();document.getElementById('produits').scrollIntoView({behavior:'smooth'})">Voir les produits</button></div>`;
+    footer.style.display = 'none'; return;
+  }
+  body.innerHTML = `
+    <div class="cart-items">${items.map(i=>`
+      <div class="cart-item">
+        <img src="${i.img}" alt="${i.nameRaw}" class="cart-item-thumb">
+        <div class="cart-item-info">
+          <div class="cart-item-name">${i.nameRaw}</div>
+          <div class="cart-item-fmt">${i.format} — ${i.price.toLocaleString('fr-FR')} FCFA/u.</div>
+          <div class="cart-item-row">
+            <div class="qty-control">
+              <button class="qty-btn" style="width:26px;height:26px;font-size:.95rem;" onclick="updateCartQty(${i.id},-1)">−</button>
+              <span style="width:28px;text-align:center;font-weight:700;font-size:.85rem;color:var(--prune-royal);">${i.qty}</span>
+              <button class="qty-btn" style="width:26px;height:26px;font-size:.95rem;" onclick="updateCartQty(${i.id},1)">+</button>
+            </div>
+            <span class="cart-item-price">${(i.price*i.qty).toLocaleString('fr-FR')} FCFA</span>
+          </div>
+        </div>
+        <button class="cart-item-remove" onclick="removeFromCart(${i.id})">🗑️</button>
+      </div>`).join('')}
+    </div>
+    <div class="cart-summary">
+      ${items.map(i=>`<div class="cart-summary-row"><span>${i.nameRaw} ×${i.qty}</span><span>${(i.price*i.qty).toLocaleString('fr-FR')} FCFA</span></div>`).join('')}
+      <div class="cart-summary-row"><span>Total général</span><span class="tv">${total().toLocaleString('fr-FR')} FCFA</span></div>
+    </div>
+    <div class="cart-form">
+      <h4>📋 Vos coordonnées</h4>
+      <div class="form-group"><label>Nom complet *</label><input id="caNom" placeholder="Votre nom et prénom"></div>
+      <div class="form-group"><label>Téléphone *</label><input type="tel" id="caTel" placeholder="Votre numéro"></div>
+      <div class="form-group"><label>Commune / Quartier *</label><input id="caVille" placeholder="Ex : Cocody, Riviera 3"></div>
+      <div class="form-group"><label>Précision livraison</label><textarea id="caNote" placeholder="Adresse précise, point de repère..." style="min-height:58px;"></textarea></div>
+    </div>`;
+  footer.style.display = 'block';
+}
+
+function sendWhatsApp() {
+  const nom   = sanitizeText(document.getElementById('caNom')?.value||'', 80);
+  const tel   = sanitizeText(document.getElementById('caTel')?.value||'', 25);
+  const ville = sanitizeText(document.getElementById('caVille')?.value||'', 80);
+  const note  = sanitizeText(document.getElementById('caNote')?.value||'', 400);
+  if (!nom||!tel||!ville) { showToast('⚠️ Veuillez remplir vos coordonnées'); return; }
+  if (!validatePhone(tel)) { showToast('⚠️ Numéro de téléphone invalide'); return; }
+  const lines = Object.values(cart).map(i=>`• ${i.nameRaw} (${i.format}) × ${i.qty} = ${(i.price*i.qty).toLocaleString('fr-FR')} FCFA`).join('\n');
+  const msg = `Bonjour Mielido, je souhaite passer une commande.\n\nDétail :\n${lines}\n\nTotal : ${total().toLocaleString('fr-FR')} FCFA\n\nNom : ${nom}\nTéléphone : ${tel}\nLieu : ${ville}\nMessage : ${note||'Aucune précision'}\n\nMerci de confirmer la disponibilité et les modalités de livraison.`;
+  window.open(`https://wa.me/2250504498899?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function openCart()  { renderCart(); secureCartInputs(); document.getElementById('cartOverlay').classList.add('open'); document.getElementById('cartPanel').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); document.getElementById('cartPanel').classList.remove('open'); document.body.style.overflow=''; }
+
+/* ── FAQ ─────────────────────────────────────────────────────────────────────── */
+function renderFAQ() {
+  document.getElementById('faqList').innerHTML = faqData.map((f,i) => `
+    <div class="faq-item" id="faq-${i}">
+      <div class="faq-q" onclick="toggleFAQ(${i})"><span>${f.q}</span><span class="faq-icon">▼</span></div>
+      <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>
+    </div>`).join('');
+}
+function toggleFAQ(i) {
+  const el = document.getElementById(`faq-${i}`);
+  const open = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(e => e.classList.remove('open'));
+  if (!open) el.classList.add('open');
+}
+
+/* ── FORMS ───────────────────────────────────────────────────────────────────── */
+function submitResellerForm(e) {
+  e.preventDefault();
+  const n = sanitizeText(document.getElementById('rNom').value, 80);
+  const t = sanitizeText(document.getElementById('rTel').value, 25);
+  const v = sanitizeText(document.getElementById('rVille').value, 80);
+  const f = document.getElementById('rFormat').value;
+  const q = sanitizeText(document.getElementById('rQte').value, 50);
+  if (!n||!t||!v) { showToast('⚠️ Veuillez remplir tous les champs requis'); return; }
+  if (!validatePhone(t)) { showToast('⚠️ Numéro de téléphone invalide'); return; }
+  const msg=`Bonjour Mielido, je souhaite devenir revendeur.\n\nNom : ${n}\nTél : ${t}\nVille : ${v}\nFormat(s) : ${f||'—'}\nQté/mois : ${q||'—'}\n\nMerci de me contacter pour les conditions.`;
+  window.open(`https://wa.me/2250574540805?text=${encodeURIComponent(msg)}`, '_blank');
+  showToast('✅ Demande envoyée sur WhatsApp !');
+}
+function submitContactForm(e) {
+  e.preventDefault();
+  const n = sanitizeText(document.getElementById('cNom').value, 80);
+  const t = sanitizeText(document.getElementById('cTel').value, 25);
+  const o = document.getElementById('cObjet').value;
+  const m = sanitizeText(document.getElementById('cMessage').value, 500);
+  if (!n||!t||!o||!m) { showToast('⚠️ Veuillez remplir tous les champs requis'); return; }
+  if (!validatePhone(t)) { showToast('⚠️ Numéro de téléphone invalide'); return; }
+  const msg=`Bonjour Mielido,\n\nNom : ${n}\nTél : ${t}\nObjet : ${o}\n\nMessage : ${m}`;
+  window.open(`https://wa.me/2250504498899?text=${encodeURIComponent(msg)}`, '_blank');
+  showToast('✅ Message envoyé sur WhatsApp !');
+  document.getElementById('contactForm').reset();
+}
+
+/* ── TOAST ───────────────────────────────────────────────────────────────────── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3200);
+}
+function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
+
+/* ── FLOATING NAV — scroll transition ───────────────────────────────────────── */
+(function(){
+  const hdr = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) hdr.classList.add('scrolled');
+    else hdr.classList.remove('scrolled');
+  }, { passive: true });
+})();
+
+/* ── SCROLL REVEAL ───────────────────────────────────────────────────────────── */
+function observeAll() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
+  }, {threshold:.12});
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+}
+
+/* ── ACTIVE NAV ──────────────────────────────────────────────────────────────── */
+function initScrollSpy() {
+  const ids = ['accueil','produits','revendeurs','apropos','usages','avis','faq','contact'];
+  const links = document.querySelectorAll('#mainNav a');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const l = document.querySelector(`#mainNav a[href="#${e.target.id}"]`);
+        if (l) l.classList.add('active');
+      }
+    });
+  }, {threshold:.35});
+  ids.forEach(id => { const s=document.getElementById(id); if(s) obs.observe(s); });
+}
+
+/* ── SECURITY ────────────────────────────────────────────────────────────────── */
+/* Nettoie les entrées utilisateur : retire les caractères de contrôle et limite la longueur */
+function sanitizeText(str, maxLen = 300) {
+  return String(str)
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '') // control chars (garde \t \n \r)
+    .replace(/<[^>]*>/g, '')                              // balises HTML
+    .trim()
+    .substring(0, maxLen);
+}
+/* Valide un numéro de téléphone (chiffres, espaces, +, -, parenthèses) */
+function validatePhone(tel) {
+  return /^[\d\s\+\-\(\)]{6,25}$/.test(tel);
+}
+/* Force rel="noopener noreferrer" sur tous les liens externes (anti tab-napping) */
+function enforceExternalLinkSecurity() {
+  document.querySelectorAll('a[target="_blank"]').forEach(a => {
+    a.rel = 'noopener noreferrer';
+  });
+}
+/* Sécurise les inputs dynamiques du panier */
+function secureCartInputs() {
+  const limits = { caNom:80, caTel:25, caVille:80, caNote:400 };
+  Object.entries(limits).forEach(([id, max]) => {
+    const el = document.getElementById(id);
+    if (el) { el.maxLength = max; if (id==='caTel') el.pattern = '[\\d\\s\\+\\-\\(\\)]{6,25}'; }
+  });
+}
+
+/* ── INIT ────────────────────────────────────────────────────────────────────── */
+renderProducts();
+renderFAQ();
+renderCart();
+observeAll();
+initScrollSpy();
+enforceExternalLinkSecurity();
+</script>
+</body>
+</html>
